@@ -1,0 +1,42 @@
+package com.zs.wechat.controller;
+
+import com.zs.wechat.common.JSSDK_Config;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Map;
+
+/**
+ * ClassName: WeChatController
+ * @Description: 前端用户微信配置获取
+ * @author dapengniao
+ * @date 2016 年 3 月 19 日 下午 5:57:36
+ */
+@Controller
+@RequestMapping("/wechatconfig")
+public class WeChatController {
+
+    /**
+     * @Description: 前端获取微信 JSSDK 的配置参数
+     * @param @param response
+     * @param @param request
+     * @param @param url
+     * @param @throws Exception
+     * @author dapengniao
+     * @date 2016 年 3 月 19 日 下午 5:57:52
+     */
+//    @RequestMapping("jssdk")
+//    public Message JSSDK_config(
+//            @RequestParam(value = "url", required = true) String url) {
+//        try {
+//            System.out.println(url);
+//            Map<String, String> configMap = JSSDK_Config.jsSDK_Sign(url);
+//            return Message.success(configMap);
+//        } catch (Exception e) {
+//            return Message.error();
+//        }
+//
+//    }
+
+}
