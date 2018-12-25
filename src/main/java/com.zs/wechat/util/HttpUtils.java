@@ -35,7 +35,7 @@ import org.apache.http.util.EntityUtils;
  *
  * @Description: http 请求工具类
  * @author zs
- * @date 2018/11/15 Pm 2:30:00
+ * @date 2018/11/19 Pm 3:30:00
  */
 @SuppressWarnings("deprecation")
 public class HttpUtils {
@@ -47,7 +47,7 @@ public class HttpUtils {
      * @param @return
      * @param @throws Exception
      * @author zs
-     * @date 2018/11/15 Pm 2:30:00
+     * @date 2018/11/19 Pm 3:30:00
      */
     @SuppressWarnings("resource")
     public static String sendGet(String reqUrl, Map<String, String> params)
@@ -82,7 +82,7 @@ public class HttpUtils {
      * @param @return
      * @param @throws Exception
      * @author zs
-     * @date 2018/11/15 Pm 2:30:00
+     * @date 2018/11/19 Pm 3:30:00
      */
     @SuppressWarnings("resource")
     public static String sendPost(String reqUrl, Map<String, String> params)
@@ -132,7 +132,7 @@ public class HttpUtils {
      * @param @throws ClientProtocolException
      * @param @throws IOException
      * @author zs
-     * @date 2018/11/15 Pm 2:30:00
+     * @date 2018/11/19 Pm 4:00:00
      */
     public static String sendPostBuffer(String urls, String params)
             throws ClientProtocolException, IOException {
@@ -156,7 +156,7 @@ public class HttpUtils {
      * @param @param xmlInfo
      * @param @return
      * @author zs
-     * @date 2018/11/15 Pm 2:30:00
+     * @date 2018/11/19 Pm 4:30:00
      */
     public static String sendXmlPost(String urlStr, String xmlInfo) {
         // xmlInfo xml 具体字符串
@@ -231,12 +231,9 @@ public class HttpUtils {
     }
 
     /**
-     * 构建 get 方式的 url
-     *
-     * @param reqUrl
-     *            基础的 url 地址
-     * @param params
-     *            查询参数
+     * @description 构建 get 方式的 url
+     * @param reqUrl (基础的 url 地址)
+     * @param params (查询参数)
      * @return 构建好的 url
      */
     public static String buildUrl(String reqUrl, Map<String, String> params) {

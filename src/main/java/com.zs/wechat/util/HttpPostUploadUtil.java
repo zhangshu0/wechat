@@ -20,7 +20,7 @@ import javax.activation.MimetypesFileTypeMap;
  * ClassName: HttpPostUploadUtil
  * @Description: 多媒体上传
  * @author zs
- * @date 2018/11/15 Pm 2:30:00
+ * @date 2018/11/19 Pm 3:30:00
  */
 public class HttpPostUploadUtil {
 
@@ -42,7 +42,7 @@ public class HttpPostUploadUtil {
                              Map<String, String> fileMap) {
         String res = "";
         HttpURLConnection conn = null;
-        String BOUNDARY = "---------------------------123821742118716"; //boundary 就是 request 头和上传文件内容的分隔符
+        String BOUNDARY = "---------------------------123821742118716"; //分隔符
         try {
             URL url = new URL(urlStr);
             conn = (HttpURLConnection) url.openConnection();

@@ -11,7 +11,7 @@ import java.util.HashMap;
  * ClassName: GetUseInfo
  * @Description: 获取微信用户信息
  * @author zs
- * @date 2018/11/15 Pm 2:30:00
+ * @date 2018/11/16 Pm 2:40:00
  */
 public class GetUseInfo {
     /**
@@ -20,7 +20,7 @@ public class GetUseInfo {
      * @param @return
      * @param @throws Exception
      * @author zs
-     * @date 2018/11/15 Pm 2:30:00
+     * @date 2018/11/16 Pm 2:40:00
      */
     private static Logger logger = Logger.getLogger(GetUseInfo.class);
     public static HashMap<String, String> Openid_userinfo(String openid)

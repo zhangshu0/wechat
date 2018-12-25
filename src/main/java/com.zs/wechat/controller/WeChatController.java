@@ -10,8 +10,8 @@ import java.util.Map;
 /**
  * ClassName: WeChatController
  * @Description: 前端用户微信配置获取
- * @author dapengniao
- * @date 2016 年 3 月 19 日 下午 5:57:36
+ * @author zs
+ * @date 2018/11/16 Pm 4:40:00
  */
 @Controller
 @RequestMapping("/wechatconfig")
@@ -23,8 +23,8 @@ public class WeChatController {
      * @param @param request
      * @param @param url
      * @param @throws Exception
-     * @author dapengniao
-     * @date 2016 年 3 月 19 日 下午 5:57:52
+     * @author zs
+     * @date 2018/11/16 Pm 4:40:00
      */
 //    @RequestMapping("jssdk")
 //    public Message JSSDK_config(

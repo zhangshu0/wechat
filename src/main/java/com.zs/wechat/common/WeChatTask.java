@@ -13,14 +13,14 @@ import java.util.Map;
  * ClassName: WeChatTask
  * @Description: 微信两小时定时任务体
  * @author zs
- * @date 2018/11/15 Pm 2:30:00
+ * @date 2018/11/16 Pm 4:40:00
  */
 public class WeChatTask {
     /**
      * @Description: 任务执行体
      * @param @throws Exception
      * @author zs
-     * @date 2018/11/15 Pm 2:30:00
+     * @date 2018/11/16 Pm 4:40:00
      */
     public void getToken_getTicket() throws Exception {
         Map<String, String> params = new HashMap<String, String>();

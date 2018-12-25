@@ -17,7 +17,7 @@ import java.util.*;
  *
  * @author zs
  * @Description: 事件消息业务分发器
- * @date 2018/11/15 Pm 2:30:00
+ * @date 2018/11/16 Pm 5:30:00
  */
 public class EventDispatcher {
     private static Logger logger = Logger.getLogger(EventDispatcher.class);

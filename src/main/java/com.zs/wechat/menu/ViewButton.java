@@ -4,7 +4,7 @@ package com.zs.wechat.menu;
  * ClassName: ViewButton
  * @Description: 视图型菜单事件
  * @author zs
- * @date 2018/11/15 Pm 2:30:00
+ * @date 2018/11/16 Pm 4:30:00
  */
 public class ViewButton {
     private String type;

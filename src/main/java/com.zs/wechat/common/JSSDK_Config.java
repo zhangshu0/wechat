@@ -10,17 +10,17 @@ import java.util.UUID;
 /**
  * ClassName: JSSDK_Config
  * @Description: 用户微信前端页面的 jssdk 配置使用
- * @author dapengniao
- * @date 2016 年 3 月 19 日 下午 3:53:23
+ * @author zs
+ * @date 2018/11/18 Pm 3:00:00
  */
 public class JSSDK_Config {
 
     /**
      * @Description: 前端 jssdk 页面配置需要用到的配置参数
-     * @param @return hashmap {@date 2018/11/15 Pm 2:30:00,timestamp,nonceStr,signature}
+     * @param @return hashmap
      * @param @throws Exception
-     * @author dapengniao
-     * @date 2016 年 3 月 19 日 下午 3:53:23
+     * @author zs
+     * @date 2018/11/18 Pm 3:20:00
      */
     public static HashMap<String, String> jsSDK_Sign(String url) throws Exception {
         String nonce_str = create_nonce_str();

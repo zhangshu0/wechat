@@ -8,7 +8,7 @@ import java.util.Arrays;
  * ClassName: SignUtil
  * @Description: 请求校验工具类
  * @author zs
- * @date 2018/11/15 Pm 2:30:00
+ * @date 2018/11/16 Pm 1:20:00
  */
 public class SignUtil {
     // 与接口配置信息中的 Token 要一致

@@ -11,7 +11,7 @@ import java.util.Properties;
  * ClassName: InterfaceUrlInti
  * @Description: 项目启动配置文件初始化
  * @author zs
- * @date 2018/11/15 Pm 2:30:00
+ * @date 2018/11/15 Pm 3:00:00
  */
 public class InterfaceUrlInti {
 

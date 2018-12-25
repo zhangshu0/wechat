@@ -21,7 +21,7 @@ import java.util.Map;
  * ClassName: MessageUtil
  * @Description: 消息工具类
  * @author zs
- * @date 2018/11/15 Pm 2:30:00
+ * @date 2018/11/15 Pm 3:30:00
  */
 public class MessageUtil {
 
@@ -126,7 +126,7 @@ public class MessageUtil {
      * @param @return
      * @param @throws Exception
      * @author zs
-     * @date 2018/11/15 Pm 2:30:00
+     * @date 2018/11/15 Pm 3:40:00
      */
     @SuppressWarnings("unchecked")
     public static Map<String, String> parseXml(HttpServletRequest request)
@@ -159,7 +159,7 @@ public class MessageUtil {
      * @param @param textMessage
      * @param @return
      * @author zs
-     * @date 2018/11/15 Pm 2:30:00
+     * @date 2018/11/15 Pm 3:40:00
      */
     public static String textMessageToXml(TextMessage textMessage) {
         xstream.alias("xml", textMessage.getClass());
@@ -171,7 +171,7 @@ public class MessageUtil {
      * @param @param newsMessage
      * @param @return
      * @author zs
-     * @date 2018/11/15 Pm 2:30:00
+     * @date 2018/11/15 Pm 3:40:00
      */
     public static String newsMessageToXml(NewsMessage newsMessage) {
         xstream.alias("xml", newsMessage.getClass());
@@ -184,7 +184,7 @@ public class MessageUtil {
      * @param @param imageMessage
      * @param @return
      * @author zs
-     * @date 2018/11/15 Pm 2:30:00
+     * @date 2018/11/15 Pm 3:40:00
      */
     public static String imageMessageToXml(ImageMessage imageMessage) {
         xstream.alias("xml", imageMessage.getClass());
@@ -196,7 +196,7 @@ public class MessageUtil {
      * @param @param voiceMessage
      * @param @return
      * @author zs
-     * @date 2018/11/15 Pm 2:30:00
+     * @date 2018/11/15 Pm 3:40:00
      */
     public static String voiceMessageToXml(VoiceMessage voiceMessage) {
         xstream.alias("xml", voiceMessage.getClass());
@@ -208,7 +208,7 @@ public class MessageUtil {
      * @param @param videoMessage
      * @param @return
      * @author zs
-     * @date 2018/11/15 Pm 2:30:00
+     * @date 2018/11/15 Pm 3:40:00
      */
     public static String videoMessageToXml(VideoMessage videoMessage) {
         xstream.alias("xml", videoMessage.getClass());
@@ -220,7 +220,7 @@ public class MessageUtil {
      * @param @param musicMessage
      * @param @return
      * @author zs
-     * @date 2018/11/15 Pm 2:30:00
+     * @date 2018/11/15 Pm 3:40:00
      */
     public static String musicMessageToXml(MusicMessage musicMessage) {
         xstream.alias("xml", musicMessage.getClass());

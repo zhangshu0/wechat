@@ -31,7 +31,7 @@ public class WechatSecurity {
      * @param @param nonce
      * @param @param echostr
      * @author zs
-     * @date 2018/11/15 Pm 2:30:00
+     * @date 2018/11/15 Pm 3:30:00
      */
     @RequestMapping(value = "/security", method = RequestMethod.GET)
     public void doGet(
@@ -60,7 +60,7 @@ public class WechatSecurity {
      * @param @param request
      * @param @param response
      * @author zs
-     * @date 2018/11/15 Pm 2:30:00
+     * @date 2018/11/15 Pm 3:30:00
      */
     @RequestMapping(value = "/security", method = RequestMethod.POST)
     public void DoPost(HttpServletRequest request,HttpServletResponse response) {
@@ -81,7 +81,7 @@ public class WechatSecurity {
      * @param @param request
      * @param @param response
      * @author zs
-     * @date 2018/11/15 Pm 2:30:00
+     * @date 2018/11/15 Pm 3:30:00
      */
     @RequestMapping(value = "/fe" ,method = RequestMethod.GET)
     public String fe(HttpServletRequest request,HttpServletResponse response) {

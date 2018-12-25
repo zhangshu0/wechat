@@ -12,7 +12,7 @@ public class GlobalConstants {
      * @param @param key
      * @param @return
      * @author zs
-     * @date 2018/11/15 Pm 2:30:00
+     * @date 2018/11/15 Pm 3:30:00
      */
     public static String getInterfaceUrl(String key) {
         return (String) interfaceUrlProperties.get(key);
