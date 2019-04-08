@@ -12,7 +12,7 @@
 
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>classpath:spring-mvc.xml,classpath:spring-quartz.xml</param-value>
+    <param-value>classpath:spring-quartz.xml</param-value>
      <!--,classpath:spring-quartz.xml 用于做任务调度 任务定时都可以 -->
   </context-param>
   <context-param>
@@ -60,7 +60,7 @@
     <servlet-name>springmvc</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <init-param>
-      <description>spring mvc 配置文件</description>
+      <description>spring mvc</description>
       <param-name>contextConfigLocation</param-name>
       <param-value>classpath*:/spring-mvc.xml</param-value>
     </init-param>
@@ -68,7 +68,7 @@
   </servlet>
   <servlet>
     <servlet-name>interface_url-init_servlet</servlet-name>
-    <servlet-class>com.zs.web.start.InterfaceUrlIntiServlet</servlet-class>
+    <servlet-class>zss.web.start.InterfaceUrlIntiServlet</servlet-class>
     <load-on-startup>2</load-on-startup>
   </servlet>
 
