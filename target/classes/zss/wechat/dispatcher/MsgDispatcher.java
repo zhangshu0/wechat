@@ -54,7 +54,7 @@ public class MsgDispatcher {
 
             Image img = new Image();
             HttpPostUploadUtil util = new HttpPostUploadUtil();
-            String filepath = "/Users/zhangshuo/wechat/src/main/webapp/WEB-INF/img/zs.jpg";
+            String filepath = "/Users/zhangshuo/wechat/src/main/webapp/WEB-INF/img/stt.jpg";
             Map<String, String> textMap = new HashMap<String, String>();
             textMap.put("name", "ahhh");
             Map<String, String> fileMap = new HashMap<String, String>();
@@ -87,7 +87,7 @@ public class MsgDispatcher {
             imgmsg.setMsgType(MessageUtil.RESP_MESSAGE_TYPE_Image);
             Image img = new Image();
             HttpPostUploadUtil util = new HttpPostUploadUtil();
-            String filepath = "/Users/zhangshuo/wechat/src/main/webapp/WEB-INF/img/sttt.jpg";
+            String filepath = "/Users/zhangshuo/wechat/src/main/webapp/WEB-INF/img/zs.jpg";
             Map<String, String> textMap = new HashMap<String, String>();
             textMap.put("name", "STTT");
             Map<String, String> fileMap = new HashMap<String, String>();

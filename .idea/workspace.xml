@@ -3,51 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2583face-1f11-487e-b11d-7d7a1cf54d22" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/logs/wechat.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/wechat.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/wechat.log2018-11-15.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/wechat.log2018-11-15.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/wechat.log2018-11-17.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/wechat.log2018-11-17.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/wechat.log2018-11-18.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/wechat.log2018-11-18.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/web/controller/WechatSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/web/controller/WechatSecurity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/web/start/InterfaceUrlInti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/web/start/InterfaceUrlInti.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/web/start/InterfaceUrlIntiServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/web/start/InterfaceUrlIntiServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/web/util/GlobalConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/web/util/GlobalConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/web/util/MessageUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/web/util/MessageUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/web/util/SignUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/web/util/SignUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/common/GetUseInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/common/GetUseInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/common/JSSDK_Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/common/JSSDK_Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/common/WeChatTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/common/WeChatTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/controller/WeChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/controller/WeChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/dispatcher/EventDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/dispatcher/EventDispatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/dispatcher/MsgDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/dispatcher/MsgDispatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/menu/ClickButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/menu/ClickButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/menu/MenuMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/menu/MenuMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/menu/ViewButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/menu/ViewButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/req/BaseMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/message/req/BaseMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/req/ImageMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/message/req/ImageMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/req/LinkMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/message/req/LinkMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/req/LocationMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/message/req/LocationMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/req/TextMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/message/req/TextMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/req/VideoMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/message/req/VideoMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/req/VoiceMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/message/req/VoiceMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/resp/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/message/resp/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/resp/BaseMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/message/resp/BaseMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/resp/CustomerMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/message/resp/CustomerMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/resp/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/message/resp/Image.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/resp/ImageMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/message/resp/ImageMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/resp/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/message/resp/Music.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/resp/MusicMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/message/resp/MusicMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/resp/NewsMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/message/resp/NewsMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/resp/TextMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/message/resp/TextMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/resp/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/message/resp/Video.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/resp/VideoMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/message/resp/VideoMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/resp/Voice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/message/resp/Voice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/resp/VoiceMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/message/resp/VoiceMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/quartz/QuartzJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/quartz/QuartzJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/util/HttpPostUploadUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/util/HttpPostUploadUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.zs/wechat/util/HttpUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/util/HttpUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/spring-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/spring-quartz.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/spring-quartz.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zss/web/util/SignUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/web/util/SignUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zss/wechat/dispatcher/MsgDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zss/wechat/dispatcher/MsgDispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/sttt.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/zss.jpg" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -77,8 +37,8 @@
       <file leaf-file-name="WechatSecurity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/zss/web/controller/WechatSecurity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="88" column="25" lean-forward="true" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
+            <state relative-caret-position="143">
+              <caret line="35" column="38" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,7 +46,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spring-mvc.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SignUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/zss/web/util/SignUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="14" column="44" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spring-mvc.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resource/spring-mvc.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="99">
@@ -95,20 +64,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spring.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/spring.xml">
+      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resource/log4j.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="195">
+              <caret line="13" column="57" lean-forward="true" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <file leaf-file-name="MsgDispatcher.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/zss/wechat/dispatcher/MsgDispatcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11">
-              <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+            <state relative-caret-position="705">
+              <caret line="47" column="59" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/zss/web/util/MessageUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -175,9 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/req/VoiceMessage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/resp/Image.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/resp/Music.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/resp/MusicMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/resp/Vedio.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.zs/wechat/message/resp/Video.java" />
@@ -221,11 +199,14 @@
         <option value="$PROJECT_DIR$/src/main/resource/spring-quartz.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com.zs/wechat/util/HttpPostUploadUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.zs/web/controller/WechatSecurity.java" />
-        <option value="$PROJECT_DIR$/src/main/resource/log4j.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/resource/spring.xml" />
         <option value="$PROJECT_DIR$/src/main/resource/spring-mvc.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/zss/web/util/MessageUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zss/web/util/SignUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/log4j.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/zss/wechat/dispatcher/MsgDispatcher.java" />
       </list>
     </option>
   </component>
@@ -342,6 +323,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wechat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wechat" type="b2602c69:ProjectViewProjectNode" />
@@ -487,7 +477,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62639000" />
+    <option name="totallyTimeSpent" value="63606000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -500,10 +490,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info active="true" anchor="right" id="Maven Projects" order="3" visible="true" weight="0.17097701" />
+      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.17097701" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -511,7 +502,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.41676793" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.41676793" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32928312" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
@@ -524,14 +515,39 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32928312" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25431034" />
       <window_info id="Web" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32806805" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49856323" weight="0.2196602" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50143677" side_tool="true" weight="0.4053398" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20545977" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.3288835" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.24301337" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.14511494" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Database" order="3" weight="0.3297414" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3288835" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4211165" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49856323" weight="0.28640777" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info id="Designer" order="2" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,31 +584,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <option name="time" value="15" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/logs/wechat.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-43230" />
-      </provider>
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/wechat.log2018-11-17.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-10980" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/welcome.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zss/wechat/message/resp/Video.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/zss/wechat/message/resp/TextMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -771,24 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zss/web/util/MessageUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3255">
-          <caret line="232" column="49" lean-forward="true" selection-start-line="232" selection-start-column="49" selection-end-line="232" selection-end-column="49" />
-          <folding>
-            <element signature="e#5800#6590#0" expanded="true" />
-            <element signature="e#6589#6590#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zss/web/util/SignUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-552">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/zss/wechat/common/GetUseInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
@@ -817,13 +794,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zss/wechat/dispatcher/MsgDispatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1182">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -865,13 +835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -893,16 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zss/web/controller/WechatSecurity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="88" column="25" lean-forward="true" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-11">
@@ -917,10 +870,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/zss/web/util/MessageUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/zss/web/util/SignUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resource/spring-mvc.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="57" lean-forward="true" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/img/zss.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/img/sttt.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/img/zs.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/img/stt.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/zss/web/controller/WechatSecurity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="35" column="38" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/zss/wechat/dispatcher/MsgDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="59" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
