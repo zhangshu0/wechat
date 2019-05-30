@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+import zss.wechat.util.ExcelUtils;
 import zss.wechat.util.POIReadExcel;
 import zss.wechat.util.StringUtil;
 
@@ -28,6 +30,8 @@ import java.util.Map;
 @Controller
 @RequestMapping("/doExcel")
 public class DoExcelTest {
+    @Autowired
+    ExcelUtils excelUtils;
     /**
      * excel读写工具类
      */
@@ -237,23 +241,26 @@ public class DoExcelTest {
      * @throws IOException
      */
     @RequestMapping(value = "/excel2Html", method = RequestMethod.POST)
-    @ResponseBody
     public String excel2Html(@RequestParam(value = "uploadFile", required = false) MultipartFile file, ModelMap modelMap) throws IOException {
-        String html = "抱歉，转换失败！";
+        String error = "抱歉，转换失败！";
         try {
             //检查文件
             checkFile(file);
             //获得Workbook工作薄对象
             Workbook workbook = getWorkBook(file);
             if (workbook != null) {
-                html = POIReadExcel.getExcelInfo(workbook,true);
+//                html = POIReadExcel.getExcelInfo(workbook,true);
+                List<String> columnList = excelUtils.readColumnName(workbook);
+                List<List<String>> dataList = excelUtils.read(workbook);
+                modelMap.put("columnList", columnList);
+                modelMap.put("dataList", dataList);
             }
         } catch (Exception e) {
             e.printStackTrace();
             modelMap.put("errorNo", 1);
-            modelMap.put("errorMsg", e.getMessage());
+            modelMap.put("errorMsg", error);
         }
-        return html;
+        return "sql";
     }
 
 }

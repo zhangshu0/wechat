@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="zss.wechat.dao.ProductDao">
+	<resultMap id="BaseResultMap" type="zss.wechat.model.Product">
+	    <id column="id" jdbcType="INTEGER" property="id" />
+		<id column="size_id" jdbcType="INTEGER" property="sizeId" />
+		<id column="material_id" jdbcType="INTEGER" property="materialId" />
+		<id column="standard_id" jdbcType="INTEGER" property="standardId" />
+	    <result column="name" jdbcType="VARCHAR" property="name" />
+    </resultMap>
+	<!--************************************************************************************-->
+	<!-- CRUD of table : Product -  -->
+	<!--************************************************************************************-->
+	
+	<insert id="addEntity" parameterType="Product" useGeneratedKeys="true" keyProperty="id">
+    	insert into product (
+   		<trim prefix="" suffix=")" suffixOverrides=",">
+			<if test="size_id != null">
+				size_id,
+			</if>
+			<if test="material_id != null">
+				material_id,
+			</if>
+			<if test="standard_id != null">
+				standard_id,
+			</if>
+			<if test="name != null">
+				name,
+			</if>
+		</trim>
+		values (
+		<trim prefix="" suffix=")" suffixOverrides=",">
+			<if test="size_id != null">
+				#{size_id,jdbcType=INTEGER},
+			</if>
+			<if test="material_id != null">
+				#{material_id,jdbcType=INTEGER},
+			</if>
+			<if test="standard_id != null">
+				#{standard_id,jdbcType=INTEGER},
+			</if>
+			<if test="name != null">
+				#{name,jdbcType=VARCHAR},
+			</if>
+		</trim>
+		<selectKey resultType="INTEGER" keyProperty="id" order="AFTER">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+
+	<update id="updateEntity" parameterType="Product">
+	update product
+	<set>
+		<if test="size_id != null ">
+			size_id = #{size_id,jdbcType=INTEGER},
+		</if>
+		<if test="material_id != null ">
+			material_id = #{material_id,jdbcType=INTEGER},
+		</if>
+		<if test="standard_id != null ">
+			standard_id = #{standard_id,jdbcType=INTEGER},
+		</if>
+		<if test="name != null ">
+			name = #{name,jdbcType=VARCHAR},
+		</if>
+
+	</set>
+	where id = #{id,jdbcType=INTEGER}
+</update>
+
+
+	<delete id="deleteEntity" parameterType="Product">
+	   	delete from product where ID = #{id,jdbcType=INTEGER}
+	</delete>
+	
+	<select id="findEntityById" parameterType="Product" resultMap="BaseResultMap">
+	    select * from product where ID = #{id,jdbcType=INTEGER}
+	</select>
+	
+	<select id="findMaxId" resultType="Integer">
+	    select max(id) from product
+	</select>
+	
+	<select id="findEntityListByCondForUp" parameterType="Product" resultMap="BaseResultMap">
+		select * from product a
+		<where >
+			<if test="id != null">
+				and a.ID = #{id,jdbcType=INTEGER}
+			</if>
+			<if test="size_id != null and size_id != ''">
+				and a.size_id = #{size_id,jdbcType=INTEGER}
+			</if>
+			<if test="material_id != null and material_id != ''">
+				and a.material_id = #{material_id,jdbcType=INTEGER}
+			</if>
+			<if test="standard_id != null and standard_id != ''">
+				and a.standard_id = #{standard_id,jdbcType=INTEGER}
+			</if>
+			<if test="name != null and name != ''">
+				and a.name = #{name,jdbcType=VARCHAR}
+			</if>
+		</where>
+		 for update
+	</select>
+	
+	<select id="findEntityByIdLock" parameterType="Product" resultMap="BaseResultMap">
+	    select * from product where ID = #{id,jdbcType=INTEGER} for update
+	</select>
+	
+	
+	<select id="findEntityListByCond" parameterType="java.util.Map" resultMap="BaseResultMap">
+	    select * from product a
+	  	<where >
+			<if test="id != null">
+				and a.ID = #{id,jdbcType=INTEGER}
+			</if>
+			<if test="size_id != null and size_id != ''">
+				and a.size_id = #{size_id,jdbcType=INTEGER}
+			</if>
+			<if test="material_id != null and material_id != ''">
+				and a.material_id = #{material_id,jdbcType=INTEGER}
+			</if>
+			<if test="standard_id != null and standard_id != ''">
+				and a.standard_id = #{standard_id,jdbcType=INTEGER}
+			</if>
+			<if test="name != null and name != ''">
+				and a.name = #{name,jdbcType=VARCHAR}
+			</if>
+		</where>
+	    order by a.ID desc
+	</select>
+
+	<select id="getAllProductList" resultMap="BaseResultMap">
+	    select * from product order by ID desc
+	</select>
+</mapper>

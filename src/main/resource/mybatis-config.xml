@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTDConfig 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!-- 配置映射文件 -->
+<configuration>
+
+	<typeAliases>
+		<typeAlias type="zss.wechat.model.Product" alias="Product" />
+		<typeAlias type="zss.wechat.model.Material" alias="Material" />
+		<typeAlias type="zss.wechat.model.Standard" alias="Standard" />
+		<typeAlias type="zss.wechat.model.Size" alias="Size" />
+	</typeAliases>
+	<mappers>
+		<!--映射文件 -->
+		<mapper resource="./mybatis/Product.xml" />
+		<mapper resource="./mybatis/Material.xml" />
+		<mapper resource="./mybatis/Standard.xml" />
+		<mapper resource="./mybatis/Size.xml" />
+	</mappers>
+</configuration>

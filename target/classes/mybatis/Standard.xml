@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="zss.wechat.dao.StandardDao">
+	<resultMap id="BaseResultMap" type="zss.wechat.model.Standard">
+	    <id column="id" jdbcType="INTEGER" property="id" />
+	    <result column="k" jdbcType="VARCHAR" property="k" />
+		<result column="v" jdbcType="VARCHAR" property="v" />
+    </resultMap>
+	<!--************************************************************************************-->
+	<!-- CRUD of table : Standard -  -->
+	<!--************************************************************************************-->
+	
+	<insert id="addEntity" parameterType="Standard" useGeneratedKeys="true" keyProperty="id">
+    	insert into standard (
+   		<trim prefix="" suffix=")" suffixOverrides=",">
+			<if test="k != null">
+				k,
+			</if>
+			<if test="v != null">
+				v,
+			</if>
+		</trim>
+		values (
+		<trim prefix="" suffix=")" suffixOverrides=",">
+			<if test="k != null">
+				#{k,jdbcType=VARCHAR},
+			</if>
+			<if test="v != null">
+				#{v,jdbcType=VARCHAR},
+			</if>
+		</trim>
+		<selectKey resultType="INTEGER" keyProperty="id" order="AFTER">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+
+	<update id="updateEntity" parameterType="Standard">
+	update standard
+	<set>
+		<if test="k != null ">
+			k = #{k,jdbcType=VARCHAR},
+		</if>
+		<if test="v != null ">
+			v = #{v,jdbcType=VARCHAR},
+		</if>
+	</set>
+	where id = #{id,jdbcType=INTEGER}
+</update>
+
+
+	<delete id="deleteEntity" parameterType="Standard">
+	   	delete from standard where ID = #{id,jdbcType=INTEGER}
+	</delete>
+	
+	<select id="findEntityById" parameterType="Standard" resultMap="BaseResultMap">
+	    select * from standard where ID = #{id,jdbcType=INTEGER}
+	</select>
+	
+	<select id="findMaxId" resultType="Integer">
+	    select max(id) from standard
+	</select>
+	
+	<select id="findEntityListByCondForUp" parameterType="Standard" resultMap="BaseResultMap">
+		select * from standard a
+		<where >
+			<if test="id != null">
+				and a.ID = #{id,jdbcType=INTEGER}
+			</if>
+			<if test="k != null and k != ''">
+				and a.k = #{k,jdbcType=VARCHAR}
+			</if>
+			<if test="v != null and v != ''">
+				and a.v = #{v,jdbcType=VARCHAR}
+			</if>
+		</where>
+		 for update
+	</select>
+	
+	<select id="findEntityByIdLock" parameterType="Standard" resultMap="BaseResultMap">
+	    select * from standard where ID = #{id,jdbcType=INTEGER} for update
+	</select>
+	
+	
+	<select id="findEntityListByCond" parameterType="java.util.Map" resultMap="BaseResultMap">
+	    select * from standard a
+	  	<where >
+			<if test="id != null">
+				and a.ID = #{id,jdbcType=INTEGER}
+			</if>
+			<if test="k != null and k != ''">
+				and a.k = #{k,jdbcType=VARCHAR}
+			</if>
+			<if test="v != null and v != ''">
+				and a.v = #{v,jdbcType=VARCHAR}
+			</if>
+		</where>
+	    order by a.ID desc
+	</select>
+
+	<select id="getAllStandardList" resultMap="BaseResultMap">
+	    select * from standard order by ID desc
+	</select>
+</mapper>

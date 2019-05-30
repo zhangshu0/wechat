@@ -69,7 +69,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -89,14 +89,46 @@
       <artifactId>druid</artifactId>
       <version>0.2.9</version>
     </dependency>
-
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.12</version>
+    </dependency>
+    <dependency>
+      <groupId>c3p0</groupId>
+      <artifactId>c3p0</artifactId>
+      <version>0.9.1.2</version>
+    </dependency>
     <!-- spring aop 包 -->
     <dependency>
       <groupId>org.aspectj</groupId>
       <artifactId>aspectjweaver</artifactId>
       <version>1.7.1</version>
     </dependency>
+    <!--log :slf4j+classes+core+logback.xml -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.7</version>
+    </dependency>
 
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-core</artifactId>
+      <version>1.1.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.1.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.logback-extensions</groupId>
+      <artifactId>logback-ext-spring</artifactId>
+      <version>0.1.1</version>
+    </dependency>
     <!-- json 包 -->
     <dependency>
       <groupId>com.alibaba</groupId>
@@ -215,7 +247,32 @@
     </dependency>
 
   </dependencies>
+  <profiles>
+    <!-- 开发/测试环境，默认激活 -->
+    <profile>
+      <id>local</id>
+      <properties>
+        <env>local</env>
+      </properties>
+      <activation>
+        <activeByDefault>true</activeByDefault><!--默认启用的是dev环境配置-->
+      </activation>
+    </profile>
+    <profile>
+      <id>test</id>
+      <properties>
+        <env>test</env>
+      </properties>
+
+    </profile>
+  </profiles>
   <build>
+
+    <filters> <!-- 指定使用的 filter -->
+      <filter>src/main/profiles/${env}/pipe.properties</filter>
+    </filters>
+
+
     <finalName>wechat</finalName>
     <plugins>
       <plugin>

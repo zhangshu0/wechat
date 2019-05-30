@@ -2,7 +2,6 @@ package zss.wechat.util;
 
 import zss.wechat.common.Type;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
