@@ -21,15 +21,15 @@ import java.util.Map;
 @RequestMapping("/wechat")
 public class WechatSecurity {
     private static Logger logger = Logger.getLogger(WechatSecurity.class);
+
     /**
-     *
-     * @Description: 用于接收 get 参数，返回验证参数
      * @param @param request
      * @param @param response
      * @param @param signature
      * @param @param timestamp
      * @param @param nonce
      * @param @param echostr
+     * @Description: 用于接收 get 参数，返回验证参数
      * @author zs
      * @date 2018/11/15 Pm 3:30:00
      */
@@ -56,36 +56,49 @@ public class WechatSecurity {
     }
 
     /**
-     * @Description: 接收微信端消息处理并做分发
      * @param @param request
      * @param @param response
+     * @Description: 接收微信端消息处理并做分发
      * @author zs
      * @date 2018/11/15 Pm 3:30:00
      */
     @RequestMapping(value = "/security", method = RequestMethod.POST)
-    public void DoPost(HttpServletRequest request,HttpServletResponse response) {
-        try{
-            Map<String, String> map=MessageUtil.parseXml(request);
-            String msgtype=map.get("MsgType");
-            if(MessageUtil.REQ_MESSAGE_TYPE_EVENT.equals(msgtype)){
-                response.getOutputStream().write(EventDispatcher.processEvent(map).getBytes()); //进入事件处理
-            }else{
-               response.getOutputStream().write(MsgDispatcher.processMessage(map).getBytes()); //进入消息处理
+    public void DoPost(HttpServletRequest request, HttpServletResponse response) {
+        try {
+            Map<String, String> map = MessageUtil.parseXml(request);
+            String msgtype = map.get("MsgType");
+            if (MessageUtil.REQ_MESSAGE_TYPE_EVENT.equals(msgtype)) {
+                response.getOutputStream().write(EventDispatcher.processEvent(map).replace(" ", "").getBytes()); //进入事件处理
+            } else {
+                response.getOutputStream().write(MsgDispatcher.processMessage(map).replace(" ", "").getBytes()); //进入消息处理
             }
-        }catch(Exception e){
-            logger.error(e,e);
+        } catch (Exception e) {
+            logger.error(e, e);
         }
     }
+
     /**
-     * @Description: 接收微信端消息处理并做分发
      * @param @param request
      * @param @param response
+     * @Description: 接收微信端消息处理并做分发
      * @author zs
      * @date 2018/11/15 Pm 3:30:00
      */
-    @RequestMapping(value = "/fe" ,method = RequestMethod.GET)
-    public String fe(HttpServletRequest request,HttpServletResponse response) {
+    @RequestMapping(value = "/fe", method = RequestMethod.GET)
+    public String fe(HttpServletRequest request, HttpServletResponse response) {
         System.out.println("--------------");
         return "welcome";
+    }
+
+    /**
+     * @param @param request
+     * @param @param response
+     * @Description: 跳转到上传界面
+     * @author zs
+     * @date 2018/11/15 Pm 3:30:00
+     */
+    @RequestMapping(value = "/getUpLoadPage", method = RequestMethod.GET)
+    public String getUpLoadPage(HttpServletRequest request, HttpServletResponse response) {
+        return "upload";
     }
 }

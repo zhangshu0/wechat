@@ -1,13 +1,10 @@
 package zss.wechat.dispatcher;
 
 import zss.web.util.MessageUtil;
-import zss.wechat.message.resp.NewsMessage;
+import zss.wechat.message.resp.*;
 import zss.wechat.util.HttpPostUploadUtil;
 import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
-import zss.wechat.message.resp.Article;
-import zss.wechat.message.resp.Image;
-import zss.wechat.message.resp.ImageMessage;
 
 import java.util.*;
 
@@ -46,27 +43,16 @@ public class MsgDispatcher {
         }
 
         if (map.get("MsgType").equals(MessageUtil.REQ_MESSAGE_TYPE_VOICE)) { // 语音消息
-            ImageMessage imgmsg = new ImageMessage();
-            imgmsg.setToUserName(openid);
-            imgmsg.setFromUserName(mpid);
-            imgmsg.setCreateTime(new Date().getTime());
-            imgmsg.setMsgType(MessageUtil.RESP_MESSAGE_TYPE_Image);
+            TextMessage text = new TextMessage();
+            text.setToUserName(openid);
+            text.setFromUserName(mpid);
+            text.setCreateTime(new Date().getTime());
+            text.setMsgType(MessageUtil.RESP_MESSAGE_TYPE_TEXT);
+            text.setContent("你好～");
 
-            Image img = new Image();
-            HttpPostUploadUtil util = new HttpPostUploadUtil();
-            String filepath = "/Users/zhangshuo/wechat/src/main/webapp/WEB-INF/img/stt.jpg";
-            Map<String, String> textMap = new HashMap<String, String>();
-            textMap.put("name", "ahhh");
-            Map<String, String> fileMap = new HashMap<String, String>();
-            fileMap.put("userfile", filepath);
-            String mediaidrs = util.formUpload(textMap, fileMap);
-            System.out.println(mediaidrs);
-            String mediaid = JSONObject.fromObject(mediaidrs).getString("media_id");
-            img.setMediaId(mediaid);
-            imgmsg.setImage(img);
-            logger.info(MessageUtil.imageMessageToXml(imgmsg));
+            logger.info(MessageUtil.textMessageToXml(text));
             System.out.println("==============这是语音消息！");
-            return MessageUtil.imageMessageToXml(imgmsg);
+            return MessageUtil.textMessageToXml(text);
         }
         //普通文本消息
 
@@ -89,7 +75,7 @@ public class MsgDispatcher {
             HttpPostUploadUtil util = new HttpPostUploadUtil();
             String filepath = "/Users/zhangshuo/wechat/src/main/webapp/WEB-INF/img/zs.jpg";
             Map<String, String> textMap = new HashMap<String, String>();
-            textMap.put("name", "STTT");
+            textMap.put("name", "zs");
             Map<String, String> fileMap = new HashMap<String, String>();
             fileMap.put("userfile", filepath);
             String mediaidrs = util.formUpload(textMap, fileMap);

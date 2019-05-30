@@ -30,6 +30,7 @@ public class WeChatTask {
                 GlobalConstants.getInterfaceUrl("tokenUrl"), params);
         String access_token = JSONObject.fromObject(jstoken).getString(
                 "access_token"); // 获取到 token 并赋值保存
+        System.out.println("当前access_token是："+access_token);
         GlobalConstants.interfaceUrlProperties.put("access_token", access_token);
         //获取 jsticket 的执行体
         //        params.clear();

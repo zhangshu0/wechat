@@ -163,6 +163,7 @@ public class MessageUtil {
      */
     public static String textMessageToXml(TextMessage textMessage) {
         xstream.alias("xml", textMessage.getClass());
+        System.out.println(xstream.toXML(textMessage));
         return xstream.toXML(textMessage);
     }
 
@@ -176,6 +177,7 @@ public class MessageUtil {
     public static String newsMessageToXml(NewsMessage newsMessage) {
         xstream.alias("xml", newsMessage.getClass());
         xstream.alias("item", new Article().getClass());
+        System.out.println(xstream.toXML(newsMessage));
         return xstream.toXML(newsMessage);
     }
 
@@ -188,6 +190,7 @@ public class MessageUtil {
      */
     public static String imageMessageToXml(ImageMessage imageMessage) {
         xstream.alias("xml", imageMessage.getClass());
+        System.out.println(xstream.toXML(imageMessage));
         return xstream.toXML(imageMessage);
     }
 
