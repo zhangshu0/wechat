@@ -10,10 +10,14 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+import zss.wechat.dao.MaterialDao;
+import zss.wechat.dao.ProductDao;
+import zss.wechat.dao.SizeDao;
+import zss.wechat.dao.StandardDao;
+import zss.wechat.model.Material;
+import zss.wechat.model.Standard;
 import zss.wechat.util.ExcelUtils;
-import zss.wechat.util.POIReadExcel;
 import zss.wechat.util.StringUtil;
 
 import javax.servlet.ServletOutputStream;
@@ -23,6 +27,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -32,6 +37,14 @@ import java.util.Map;
 public class DoExcelTest {
     @Autowired
     ExcelUtils excelUtils;
+    @Autowired
+    MaterialDao materialDao;
+    @Autowired
+    StandardDao standardDao;
+    @Autowired
+    SizeDao sizeDao;
+    @Autowired
+    ProductDao productDao;
     /**
      * excel读写工具类
      */
@@ -251,7 +264,23 @@ public class DoExcelTest {
             if (workbook != null) {
 //                html = POIReadExcel.getExcelInfo(workbook,true);
                 List<String> columnList = excelUtils.readColumnName(workbook);
-                List<List<String>> dataList = excelUtils.read(workbook);
+                List<Material> mas = materialDao.getAllMaterialList();
+                List<Standard> stas = standardDao.getAllStandardList();
+                List<List<String>> temp = excelUtils.read(workbook);
+                List<Map<String,Object>> maps = excelUtils.readAndBuild(temp,mas,stas);
+                List<List<String>> dataList = new ArrayList<List<String>>();
+                for (List<String> item: temp) {
+                    for (Map<String, Object> items : maps) {
+                        if (items.get("材质") != null) {
+                            item.add(items.get("材质").toString());
+                        } else if (items.get("标准") != null) {
+                            item.add(items.get("标准").toString());
+                        } else if (items.get("尺寸") != null) {
+                            item.add(items.get("尺寸").toString());
+                        }
+                    }
+                    dataList.add(item);
+                }
                 modelMap.put("columnList", columnList);
                 modelMap.put("dataList", dataList);
             }

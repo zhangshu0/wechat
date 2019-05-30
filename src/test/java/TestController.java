@@ -81,4 +81,11 @@ public class TestController {
             standardDao.addEntity(standard);
         }
     }
+    @Test
+    public void q() {
+        List<Material> materials = materialDao.getAllMaterialList();
+        List<Standard> standards = standardDao.getAllStandardList();
+        System.out.println(materials);
+        System.out.println(standards);
+    }
 }

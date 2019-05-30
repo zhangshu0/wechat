@@ -6,8 +6,8 @@
 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context-3.0.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-    <!-- 引入属性文件 -->
-    <context:property-placeholder location="classpath:config.properties"/>
+     <!--引入属性文件-->
+    <context:property-placeholder location="classpath:pipe.properties"/>
     <!-- 自动扫描(自动注入) -->
     <context:annotation-config/>
     <context:component-scan base-package="zss">
@@ -20,16 +20,17 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd http://www.
           class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
         <property name="supportedMediaTypes">
             <list>
-                <value>text/html;charset=UTF-8</value>
+                <value>application/json;charset=UTF-8</value>
             </list>
         </property>
     </bean>
 
     <!-- 启动 Spring MVC 的注解功能，完成请求和注解 POJO 的映射 -->
+    <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
     <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
         <property name="messageConverters">
             <list>
-                <ref bean="mappingJacksonHttpMessageConverter"/><!-- json 转换器 -->
+                <ref bean="mappingJacksonHttpMessageConverter" />
             </list>
         </property>
     </bean>

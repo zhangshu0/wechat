@@ -23,6 +23,10 @@ import org.apache.poi.ss.usermodel.*;
 
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.stereotype.Repository;
+import zss.wechat.model.Material;
+import zss.wechat.model.Product;
+import zss.wechat.model.Size;
+import zss.wechat.model.Standard;
 
 /**
  * @描述：测试excel读取 导入的jar包
@@ -498,10 +502,6 @@ public class ExcelUtils {
         Row row = sheet.getRow(0);
 
         List<String> rowLst = new ArrayList<String>();
-        rowLst.add("产品");
-        rowLst.add("尺寸");
-        rowLst.add("材质");
-        rowLst.add("标准");
         /** 循环Excel的列 */
 
         for (int c = 0; c < this.getTotalCells(); c++) {
@@ -544,7 +544,8 @@ public class ExcelUtils {
             }
 
             rowLst.add(cellValue);
-
+            rowLst.add("材质");
+            rowLst.add("标准");
         }
 
         /** 保存第r行的第c列 */
@@ -686,6 +687,34 @@ public class ExcelUtils {
 
     }
 
+    /**
+     * @描述：读取数据，以行读取
+     * @时间：2012-08-29 下午16:50:15
+     * @参数：@param Workbook
+     * @参数：@return
+     * @返回值：List<List<String>>
+     */
+
+    public List<Map<String,Object>> readAndBuild(List<List<String>> rowLst, List<Material> mes, List<Standard> stas) {
+
+        List<Map<String, Object>> builds = new ArrayList<Map<String, Object>>();
+        Map<String, Object> build = new HashMap<String, Object>();
+        for (List<String> item : rowLst) {
+            for (Material m : mes) {
+                if (item.toString().toUpperCase().replaceAll(" ", "").indexOf(m.getName().toUpperCase()) != -1) {
+                    build.put("材质", m.getName());
+                }
+            }
+            for (Standard m : stas) {
+                if (item.toString().toUpperCase().replaceAll(" ", "").indexOf(m.getK().toUpperCase()) != -1) {
+                    build.put("标准", m);
+                }
+            }
+            builds.add(build);
+        }
+        return builds;
+
+    }
 }
 
 /**

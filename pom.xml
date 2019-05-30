@@ -7,38 +7,99 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>wechat</name>
   <url>http://maven.apache.org</url>
+  <properties>
+    <!-- spring版本号 -->
+    <spring.version>3.2.9.RELEASE</spring.version>
+    <!-- mybatis版本号 -->
+    <mybatis.version>3.0.5</mybatis.version>
+    <!-- log4j日志文件管理包版本 -->
+    <slf4j.version>1.6.6</slf4j.version>
+    <!--<log4j.version>1.2.9</log4j.version>-->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+  </properties>
+
   <dependencies>
     <!-- spring -->
     <dependency>
       <groupId>org.springframework</groupId>
-      <artifactId>spring-test</artifactId>
-      <version>4.3.17.RELEASE</version>
+      <artifactId>spring-aop</artifactId>
+      <version>4.2.4.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aspects</artifactId>
+      <version>4.2.4.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-beans</artifactId>
+      <version>4.2.4.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>4.2.4.RELEASE</version>
+      <exclusions>
+        <exclusion>
+          <groupId>commons-logging</groupId>
+          <artifactId> commons-logging</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context-support</artifactId>
-      <version>4.3.17.RELEASE</version>
+      <version>4.2.4.RELEASE</version>
     </dependency>
 
     <dependency>
       <groupId>org.springframework</groupId>
-      <artifactId>spring-webmvc</artifactId>
-      <version>4.3.10.RELEASE</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
-      <version>4.3.17.RELEASE</version>
+      <version>4.2.4.RELEASE</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-expression</artifactId>
+      <version>4.2.4.RELEASE</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
-      <artifactId>spring-websocket</artifactId>
-      <version>4.3.17.RELEASE</version>
+      <artifactId>spring-jdbc</artifactId>
+      <version>4.2.4.RELEASE</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
-      <artifactId>spring-messaging</artifactId>
-      <version>4.3.17.RELEASE</version>
+      <artifactId>spring-orm</artifactId>
+      <version>4.2.4.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>4.2.4.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-tx</artifactId>
+      <version>4.2.4.RELEASE</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>4.2.4.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>4.2.4.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-taglibs</artifactId>
+      <version>3.2.5.RELEASE</version>
     </dependency>
     <!-- fastweixin -->
     <dependency>
@@ -55,7 +116,7 @@
     <dependency>
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis-spring</artifactId>
-      <version>1.1.1</version>
+      <version>1.2.3</version>
     </dependency>
 
     <!-- mysql -->
@@ -247,38 +308,29 @@
     </dependency>
 
   </dependencies>
-  <profiles>
-    <!-- 开发/测试环境，默认激活 -->
-    <profile>
-      <id>local</id>
-      <properties>
-        <env>local</env>
-      </properties>
-      <activation>
-        <activeByDefault>true</activeByDefault><!--默认启用的是dev环境配置-->
-      </activation>
-    </profile>
-    <profile>
-      <id>test</id>
-      <properties>
-        <env>test</env>
-      </properties>
 
-    </profile>
-  </profiles>
   <build>
-
-    <filters> <!-- 指定使用的 filter -->
-      <filter>src/main/profiles/${env}/pipe.properties</filter>
-    </filters>
-
 
     <finalName>wechat</finalName>
     <plugins>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.3</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.12.4</version>
+      </plugin>
+      <plugin>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-maven-plugin</artifactId>
-        <version>9.0.4.v20130625</version>
+        <version>9.3.0.M2</version>
 
         <configuration>
           <!-- <scanIntervalSeconds>10</scanIntervalSeconds>
