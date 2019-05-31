@@ -22,10 +22,12 @@
 /Users/zhangshuo/wechat/src/main/java/zss/wechat/menu/MenuMain.java
 /Users/zhangshuo/wechat/src/main/java/zss/web/util/GlobalConstants.java
 /Users/zhangshuo/wechat/src/main/java/zss/wechat/menu/ClickButton.java
+/Users/zhangshuo/wechat/src/main/java/zss/wechat/common/Page.java
 /Users/zhangshuo/wechat/src/main/java/zss/wechat/message/resp/NewsMessage.java
 /Users/zhangshuo/wechat/src/main/java/zss/wechat/dao/MaterialDao.java
 /Users/zhangshuo/wechat/src/main/java/zss/wechat/message/resp/MusicMessage.java
 /Users/zhangshuo/wechat/src/main/java/zss/wechat/controller/ActiveMsgController.java
+/Users/zhangshuo/wechat/src/main/java/zss/wechat/common/TransPageInfoUtil.java
 /Users/zhangshuo/wechat/src/main/java/zss/wechat/message/req/TextMessage.java
 /Users/zhangshuo/wechat/src/main/java/zss/wechat/message/resp/Article.java
 /Users/zhangshuo/wechat/src/main/java/zss/wechat/common/GetExistAccessToken.java

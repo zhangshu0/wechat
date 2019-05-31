@@ -12,6 +12,14 @@
 		<typeAlias type="zss.wechat.model.Standard" alias="Standard" />
 		<typeAlias type="zss.wechat.model.Size" alias="Size" />
 	</typeAliases>
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageInterceptor">
+			<!--设置数据库类型 Oracle,Mysql,MariaDB,SQLite,Hsqldb,PostgreSQL六种数据库-->
+			<property name="helperDialect" value="mysql"/>
+			<property name="reasonable" value="true"/>
+			<property name="pageSizeZero" value="true"/>
+		</plugin>
+	</plugins>
 	<mappers>
 		<!--映射文件 -->
 		<mapper resource="./mybatis/Product.xml" />

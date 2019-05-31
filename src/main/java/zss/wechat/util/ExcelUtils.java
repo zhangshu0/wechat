@@ -15,6 +15,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import com.alibaba.fastjson.JSONObject;
+import net.sf.json.JSON;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFFormulaEvaluator;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -542,14 +544,12 @@ public class ExcelUtils {
                         break;
                 }
             }
-
             rowLst.add(cellValue);
-            rowLst.add("材质");
-            rowLst.add("标准");
         }
 
         /** 保存第r行的第c列 */
-
+        rowLst.add("材质");
+        rowLst.add("标准");
         return rowLst;
 
     }
@@ -695,22 +695,25 @@ public class ExcelUtils {
      * @返回值：List<List<String>>
      */
 
-    public List<Map<String,Object>> readAndBuild(List<List<String>> rowLst, List<Material> mes, List<Standard> stas) {
-
-        List<Map<String, Object>> builds = new ArrayList<Map<String, Object>>();
-        Map<String, Object> build = new HashMap<String, Object>();
+    public List<List<String>> readAndBuild(List<List<String>> rowLst, List<Material> mes, List<Standard> stas) {
+        List<List<String>> builds = new ArrayList<>();
         for (List<String> item : rowLst) {
+            List<String> temp = item;
+            List<String> material = new ArrayList<>();
             for (Material m : mes) {
                 if (item.toString().toUpperCase().replaceAll(" ", "").indexOf(m.getName().toUpperCase()) != -1) {
-                    build.put("材质", m.getName());
+                    material.add(m.getName());
                 }
             }
+            temp.add(JSONObject.toJSONString(material).replace("[","").replace("]","").replace("\"",""));
+            List<String> standard = new ArrayList<>();
             for (Standard m : stas) {
                 if (item.toString().toUpperCase().replaceAll(" ", "").indexOf(m.getK().toUpperCase()) != -1) {
-                    build.put("标准", m);
+                    standard.add(m.getK()+":"+m.getV());
                 }
             }
-            builds.add(build);
+            temp.add(JSONObject.toJSONString(standard).replace("[","").replace("]","").replace("\"",""));
+            builds.add(temp);
         }
         return builds;
 

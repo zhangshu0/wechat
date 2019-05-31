@@ -27,7 +27,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URLEncoder;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -266,23 +265,11 @@ public class DoExcelTest {
                 List<String> columnList = excelUtils.readColumnName(workbook);
                 List<Material> mas = materialDao.getAllMaterialList();
                 List<Standard> stas = standardDao.getAllStandardList();
-                List<List<String>> temp = excelUtils.read(workbook);
-                List<Map<String,Object>> maps = excelUtils.readAndBuild(temp,mas,stas);
-                List<List<String>> dataList = new ArrayList<List<String>>();
-                for (List<String> item: temp) {
-                    for (Map<String, Object> items : maps) {
-                        if (items.get("材质") != null) {
-                            item.add(items.get("材质").toString());
-                        } else if (items.get("标准") != null) {
-                            item.add(items.get("标准").toString());
-                        } else if (items.get("尺寸") != null) {
-                            item.add(items.get("尺寸").toString());
-                        }
-                    }
-                    dataList.add(item);
-                }
+
                 modelMap.put("columnList", columnList);
-                modelMap.put("dataList", dataList);
+                List<List<String>> maps = excelUtils.readAndBuild(excelUtils.read(workbook),mas,stas);
+                modelMap.put("dataList",maps);
+//                modelMap.put("dataList", maps.subList((page.getCurrentPage()-1)*page.getRecordPerPage(),page.getCurrentPage()*page.getRecordPerPage()>maps.size()?maps.size():page.getCurrentPage()*page.getRecordPerPage()));
             }
         } catch (Exception e) {
             e.printStackTrace();

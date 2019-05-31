@@ -17,13 +17,13 @@
 	<insert id="addEntity" parameterType="Product" useGeneratedKeys="true" keyProperty="id">
     	insert into product (
    		<trim prefix="" suffix=")" suffixOverrides=",">
-			<if test="size_id != null">
+			<if test="sizeId != null">
 				size_id,
 			</if>
-			<if test="material_id != null">
+			<if test="materialId != null">
 				material_id,
 			</if>
-			<if test="standard_id != null">
+			<if test="standardId != null">
 				standard_id,
 			</if>
 			<if test="name != null">
@@ -32,14 +32,14 @@
 		</trim>
 		values (
 		<trim prefix="" suffix=")" suffixOverrides=",">
-			<if test="size_id != null">
-				#{size_id,jdbcType=INTEGER},
+			<if test="sizeId != null">
+				#{sizeId,jdbcType=INTEGER},
 			</if>
-			<if test="material_id != null">
-				#{material_id,jdbcType=INTEGER},
+			<if test="materialId != null">
+				#{materialId,jdbcType=INTEGER},
 			</if>
-			<if test="standard_id != null">
-				#{standard_id,jdbcType=INTEGER},
+			<if test="standardId != null">
+				#{standardId,jdbcType=INTEGER},
 			</if>
 			<if test="name != null">
 				#{name,jdbcType=VARCHAR},
@@ -53,14 +53,14 @@
 	<update id="updateEntity" parameterType="Product">
 	update product
 	<set>
-		<if test="size_id != null ">
-			size_id = #{size_id,jdbcType=INTEGER},
+		<if test="sizeId != null ">
+			size_id = #{sizeId,jdbcType=INTEGER},
 		</if>
-		<if test="material_id != null ">
-			material_id = #{material_id,jdbcType=INTEGER},
+		<if test="materialId != null ">
+			material_id = #{materialId,jdbcType=INTEGER},
 		</if>
-		<if test="standard_id != null ">
-			standard_id = #{standard_id,jdbcType=INTEGER},
+		<if test="standardId != null ">
+			standard_id = #{standardId,jdbcType=INTEGER},
 		</if>
 		<if test="name != null ">
 			name = #{name,jdbcType=VARCHAR},
@@ -89,14 +89,14 @@
 			<if test="id != null">
 				and a.ID = #{id,jdbcType=INTEGER}
 			</if>
-			<if test="size_id != null and size_id != ''">
-				and a.size_id = #{size_id,jdbcType=INTEGER}
+			<if test="sizeId != null and sizeId != ''">
+				and a.size_id = #{sizeId,jdbcType=INTEGER}
 			</if>
-			<if test="material_id != null and material_id != ''">
-				and a.material_id = #{material_id,jdbcType=INTEGER}
+			<if test="materialId != null and materialId != ''">
+				and a.material_id = #{materialId,jdbcType=INTEGER}
 			</if>
-			<if test="standard_id != null and standard_id != ''">
-				and a.standard_id = #{standard_id,jdbcType=INTEGER}
+			<if test="standardId != null and standardId != ''">
+				and a.standard_id = #{standardId,jdbcType=INTEGER}
 			</if>
 			<if test="name != null and name != ''">
 				and a.name = #{name,jdbcType=VARCHAR}
@@ -116,14 +116,14 @@
 			<if test="id != null">
 				and a.ID = #{id,jdbcType=INTEGER}
 			</if>
-			<if test="size_id != null and size_id != ''">
-				and a.size_id = #{size_id,jdbcType=INTEGER}
+			<if test="sizeId != null and sizeId != ''">
+				and a.size_id = #{sizeId,jdbcType=INTEGER}
 			</if>
-			<if test="material_id != null and material_id != ''">
-				and a.material_id = #{material_id,jdbcType=INTEGER}
+			<if test="materialId != null and materialId != ''">
+				and a.material_id = #{materialId,jdbcType=INTEGER}
 			</if>
-			<if test="standard_id != null and standard_id != ''">
-				and a.standard_id = #{standard_id,jdbcType=INTEGER}
+			<if test="standardId != null and standardId != ''">
+				and a.standard_id = #{standardId,jdbcType=INTEGER}
 			</if>
 			<if test="name != null and name != ''">
 				and a.name = #{name,jdbcType=VARCHAR}
